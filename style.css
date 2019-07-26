@@ -267,14 +267,16 @@ input[type="checkbox"]:checked + label {
 .event p {
   color: gray;
 }
-.time:hover {
-  color: white;
-}
-.event a:hover {
+
+.event:hover a {
   display: block;
   padding-left: 2rem;
   background-image: url(dot.png);
   background-position: 0 1.2rem;
   background-size: 1.6rem 1.6rem;
   background-repeat: no-repeat;
+}
+.event:hover p,
+.event:hover .time {
+  color: white;
 }
