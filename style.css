@@ -225,20 +225,42 @@ input[type="checkbox"]:checked + label {
 .today-pro {
   display: flex;
   flex-flow: row wrap;
+  overflow: hidden;
 }
-.today-pro .img {
+.today-pro .today-event {
   width: 300px;
   height: 300px;
+  overflow: hidden;
+  position: relative;
 }
-.today-pro .img:first-child {
-  background: url(https://api.paradiso.nl/img/events/allman-bets-band.jpg?w=606&h=690&fit=crop-49-31)
-    no-repeat bottom center/cover;
-  font-size: 1rem;
+.today-event-link {
+  display: block;
+  transition: all 0.5s ease-in-out;
 }
-.today-pro .img:nth-child(2) {
-  background: url(https://api.paradiso.nl/img/events/the-proclaimers.jpg?w=606&h=690&fit=crop-50-41)
-    no-repeat bottom center/cover;
+.today-event img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
+.event-info {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-weight: 900;
+  transition: all 0.5s ease-in-out;
+}
+.event-info h2,
+.event-info h3 {
+  margin: 0;
+}
+.today-event-link:hover {
+  transform: scale(1.2, 1.2);
+}
+.today-event-link:hover .event-info {
+  bottom: 70px;
+  left: 30px;
+}
+
 /* Programme */
 .program-menu {
   display: flex;
