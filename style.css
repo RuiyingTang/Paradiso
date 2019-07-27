@@ -60,10 +60,6 @@ h1 {
 .menu li {
   padding: 0 15px;
 }
-/* .menu li:first-child {
-  margin-left: 0;
-  padding-left: 0;
-} */
 .menu li i {
   padding-right: 10px;
 }
@@ -282,6 +278,9 @@ input[type="checkbox"]:checked + label {
   grid-template-columns: 15% 1fr;
   border-bottom: 1px solid gray;
 }
+.event-list:last-child {
+  border-bottom: none;
+}
 .event {
   display: grid;
   grid-template-columns: 1fr 10%;
@@ -302,5 +301,25 @@ input[type="checkbox"]:checked + label {
 }
 .event:hover p,
 .event:hover .time {
+  color: white;
+}
+/* footer */
+.footer {
+  margin: 50px 0;
+  color: gray;
+}
+.footer li:first-child a {
+  text-decoration: underline;
+}
+.footer i {
+  padding-left: 10px;
+}
+.footer li:nth-child(2) a {
+  color: gray;
+}
+.footer li:first-child a:hover {
+  text-decoration: none;
+}
+.footer li:nth-child(2) a:hover {
   color: white;
 }
