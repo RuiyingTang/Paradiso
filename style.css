@@ -142,6 +142,8 @@ input[type="checkbox"]:checked + label {
 .img {
   overflow: hidden;
   position: relative;
+  display: flex;
+  align-items: flex-end;
 }
 .img-link {
   display: block;
@@ -194,7 +196,7 @@ input[type="checkbox"]:checked + label {
   left: 60px;
   font-weight: 900;
   z-index: 5;
-  transition: all 0.6s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .img-info h2 {
@@ -213,7 +215,7 @@ input[type="checkbox"]:checked + label {
 
 .img-link:hover .img-info {
   bottom: 70px;
-  left: 70px;
+  left: 60px;
 }
 .img-link:hover h2:last-child {
   opacity: 1;
@@ -232,6 +234,8 @@ input[type="checkbox"]:checked + label {
   height: 300px;
   overflow: hidden;
   position: relative;
+  display: flex;
+  align-items: flex-end;
 }
 .today-event-link {
   display: block;
@@ -245,9 +249,9 @@ input[type="checkbox"]:checked + label {
 .event-info {
   position: absolute;
   bottom: 20px;
-  left: 20px;
+  left: 30px;
   font-weight: 900;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease;
 }
 .event-info h2,
 .event-info h3 {
@@ -344,4 +348,57 @@ input[type="checkbox"]:checked + label {
 }
 .footer li:nth-child(2) a:hover {
   color: white;
+}
+
+@media (max-width: 768px) {
+  /* nav bar */
+  .nav-white form,
+  .nav-white .menu li:last-child,
+  .nav-program {
+    display: none;
+  }
+  /* paradiso */
+  .img-galary {
+    display: grid;
+    grid-template: 400px/1fr;
+    overflow: hidden;
+  }
+  .img:nth-child(2),
+  .img:nth-child(3),
+  .img:nth-child(4),
+  .img:nth-child(5) {
+    display: none;
+  }
+  .img:first-child {
+    grid-area: 1/1/2/2;
+  }
+  /* today */
+  .today h1 {
+    font-size: 3.5rem;
+  }
+  /* program */
+  .program-menu ul:last-child {
+    display: none;
+  }
+  .btn {
+    font-size: 12px;
+    padding: 15px 8px;
+  }
+  .event-list {
+    grid-template-columns: 1fr;
+  }
+  .event {
+    grid-template-columns: 1fr 20%;
+  }
+  .event h2 {
+    font-size: 18px;
+    margin: 5px 0;
+  }
+  .event p {
+    font-size: 12px;
+    margin: 0;
+  }
+  .footer li {
+    font-size: 12px;
+  }
 }
